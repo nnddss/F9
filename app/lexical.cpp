@@ -28,7 +28,7 @@ int main(int argc,char *argv[]){
 		token[0]=c;
 	   }
 	else{
-		printf("Unknow\n");
+		printf("Unknown\n");
 		return 0;
 	}
 	int j=11;
