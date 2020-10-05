@@ -5,7 +5,7 @@ char  token[50];
 char c;
 int main(){
 	FILE *fp;
-	fp = fopen("1.txt", "r");
+	fp = fopen(argv[1], "r");
     char  keywordname[30][20]={"","Begin","End","For","Do","If","Then","Else","Ident","Int","Colon","Plus","Star",
 	"Comma","LParenthesis","RParenthesis","Assign"};
     char  keyword[30][10]={"","BEGIN","END","FOR","DO","IF","THEN","ELSE","","",":","+","*",",","(",")",":="};
