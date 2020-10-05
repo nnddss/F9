@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-char  token[50];
+char  token[100];
 char c;
 int main(int argc,char *argv[]){
 	FILE *fp;
@@ -24,7 +24,7 @@ int main(int argc,char *argv[]){
 			continue;
 	   }
    		else if((c>='a'&&c<='z')||(c>='A'&&c<='Z')||(c>='0'&&c<='9')||c=='+'||c=='*'||c==','||c=='('||c==')'){
-   		memset(token,0,50);
+   		memset(token,0,100);
 		token[0]=c;
 	   }
 	else{
