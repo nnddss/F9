@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 long long dis[500010];
-char  token[50];
+char  token[100];
 char c;
 int main(int argc,char *argv[]){
 	FILE *fp;
@@ -9,26 +9,26 @@ int main(int argc,char *argv[]){
     char  keywordname[30][20]={"","Begin","End","For","Do","If","Then","Else","Ident","Int","Colon","Plus","Star",
 	"Comma","LParenthesis","RParenthesis","Assign"};
     char  keyword[30][10]={"","BEGIN","END","FOR","DO","IF","THEN","ELSE","","",":","+","*",",","(",")",":="};
-   while(c=fgetc(fp)){
-   	if(c==' '||c=='\n'||c=='\r')
-   		continue;
-   	else if(c==-1)
-   		return 0;
-   	else if(c==':'){
-   		c=fgetc(fp);
-   		if(c=='=')
-   		printf("Assign\n");
-   		else{
-   		printf("Colon\n");	
-   		fseek(fp, -1, SEEK_CUR);
-		}
-		continue;
+   	while(c=fgetc(fp)){
+   		if(c==' '||c=='\n'||c=='\r')
+   			continue;
+   		else if(c==-1)
+   			return 0;
+   		else if(c==':'){
+   			c=fgetc(fp);
+   			if(c=='=')
+   				printf("Assign\n");
+   			else{
+   			printf("Colon\n");	
+   			fseek(fp, -1, SEEK_CUR);
+			}
+			continue;
 	   }
-   	else if((c>='a'&&c<='z')||(c>='A'&&c<='Z')||(c>='0'&&c<='9')||c=='+'||c=='*'||c==','||c=='('||c==')'){
-   		memset(token,0,50);
+   		else if((c>='a'&&c<='z')||(c>='A'&&c<='Z')||(c>='0'&&c<='9')||c=='+'||c=='*'||c==','||c=='('||c==')'){
+   		memset(token,0,100);
 		token[0]=c;
 	   }
-	else {
+	else{
 		printf("Unknow\n");
 		return 0;
 	}
@@ -39,8 +39,6 @@ int main(int argc,char *argv[]){
 			continue;
 		}
 	} 
-	
-   	 
    	int k=0;
    	if((c>='a'&&c<='z')||(c>='A'&&c<='Z')){
    		int i=1;
