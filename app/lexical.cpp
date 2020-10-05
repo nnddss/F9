@@ -73,10 +73,10 @@ int main(int argc,char *argv[]){
 			else{
 				fseek(fp, -1, SEEK_CUR);
 				printf("%s(%d)\n",keywordname[9],atoi(token));
+				if(c==-1)
+   				return 0;
 				break;
 			}
-			if(c==-1)
-   				return 0;
 		   }
 	}
 
